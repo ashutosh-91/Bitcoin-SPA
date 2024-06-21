@@ -1,12 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Router,Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
+import SideBar from './components/SideBar';
 
 function App() {
   return (
-    
-       <Navbar/>
+       <BrowserRouter>
+         <Routes>
+           <Route path='/' element={<SideBar/>}/>   
+         </Routes>
+       </BrowserRouter>
+       
        
    
   );
